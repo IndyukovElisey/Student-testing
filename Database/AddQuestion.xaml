@@ -1,0 +1,45 @@
+﻿<Window x:Class="Database.AddQuestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="Добавление вопроса" Height="442.247" Width="383.568"
+        WindowStartupLocation = "CenterScreen" SizeToContent="Height" Background="AliceBlue" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel>
+            <DockPanel>
+                <TextBlock x:Name="subjectname" DockPanel.Dock="Left" Margin="5" VerticalAlignment="Center">Дисциплина</TextBlock>
+                <ComboBox Name="subject" Margin="5"></ComboBox>
+            </DockPanel>
+            <GroupBox Header="Тип ответа" Margin="5">
+                <StackPanel Margin="5">
+                    <RadioButton IsChecked="True" Name="Один" Click="Radiobutton_Click">Выбрать один правильный</RadioButton>
+                    <RadioButton Name="Несколько" Click="Radiobutton_Click">Выбрать несколько правильных</RadioButton>
+                    <RadioButton Name="Текстовый" Click="Radiobutton_Click">Ввести текст</RadioButton>
+                    <RadioButton Name="Числовой" Click="Radiobutton_Click">Ввести число</RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <TextBlock Name="questionname" Margin="5">Текст вопроса</TextBlock>
+            <ScrollViewer Margin="5" Height="100" VerticalScrollBarVisibility="Auto">
+                <TextBox Name="question" AcceptsReturn="True" TextWrapping="Wrap"></TextBox>
+            </ScrollViewer>
+            <DockPanel>
+                <TextBlock Name="answertext" Margin="5" DockPanel.Dock="Left">Ответ</TextBlock>
+                <TextBox Name="answer"  VerticalAlignment="Center" Margin="5"></TextBox>
+            </DockPanel>
+            <GroupBox Name="questionlevel" Header="Уровни вопроса" Margin="5">
+                <StackPanel>
+                    <CheckBox Name="satisfactory" IsChecked="True">Удовлетворительно</CheckBox>
+                    <CheckBox Name="good" IsChecked="True">Хорошо</CheckBox>
+                    <CheckBox Name="excellent" IsChecked="True">Отлично</CheckBox>
+                </StackPanel>
+            </GroupBox>
+            <DockPanel>
+                <Button Click="Cancel_Click" Margin="5" DockPanel.Dock="Right">Отмена</Button>
+                <Button Click="Button_Click" Margin="5">Добавить вопрос</Button>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>

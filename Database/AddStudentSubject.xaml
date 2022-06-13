@@ -1,0 +1,32 @@
+﻿<Window x:Class="Database.AddStudentSubject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="Добавление связи студент-дисциплина" Height="148.848" Width="441.12"
+        WindowStartupLocation = "CenterScreen" SizeToContent="Height" Loaded="Window_Loaded">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0">
+                <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                    <TextBlock Name="studenttext" Margin="7" VerticalAlignment="Center">Студент</TextBlock>
+                    <TextBlock Name="subjecttext" Margin="7" VerticalAlignment="Center">Дисциплина</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <ComboBox Name="studentcombobox" Margin="5" VerticalAlignment="Center" SelectionChanged="studentcombobox_SelectionChanged"></ComboBox>
+                    <ComboBox Name="subjectcombobox" Margin="5" VerticalAlignment="Center" SelectionChanged="subjectcombobox_SelectionChanged"></ComboBox>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel Grid.Row="1">
+                <Button Click="Cancel_Click" Margin="5" DockPanel.Dock="Right">Отмена</Button>
+                <Button Click="Button_Click" Margin="5">Добавить связь</Button>
+            </DockPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

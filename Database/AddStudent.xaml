@@ -1,0 +1,64 @@
+﻿<Window x:Class="Database.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="Добавление студента" Height="305.073" Width="369.237"  Background="AliceBlue"
+        WindowStartupLocation = "CenterScreen" SizeToContent="Height" FocusManager.FocusedElement="{Binding ElementName=studname1}">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0">
+                <StackPanel DockPanel.Dock="Left">
+                    <TextBlock Grid.Row="0" Grid.Column="0" Margin="5">Фамилия</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Margin="5">Имя</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Margin="5">Отчество</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <TextBox Name="studname1" Grid.Row="0" Grid.Column="1" Margin="5"></TextBox>
+                    <TextBox Name="studname2" Grid.Row="1" Grid.Column="1" Margin="5"></TextBox>
+                    <TextBox Name="studname3" Grid.Row="2" Grid.Column="1" Margin="5"></TextBox>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel Grid.Row="1">
+                <TextBlock Name="dateofbirthtext" Margin="5" DockPanel.Dock="Left" VerticalAlignment="Center">Дата рождения</TextBlock>
+                <DatePicker Name="dateofbirth" Margin="5" ></DatePicker>
+            </DockPanel>
+            <DockPanel Grid.Row="2">
+                <TextBlock Margin="5" DockPanel.Dock="Left">Пол</TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <RadioButton Name="М" GroupName="Sex" IsChecked="True" Margin="2" Checked="RadioButton_Checked">М</RadioButton>
+                    <RadioButton Name="Ж" GroupName="Sex" Margin="2" Checked="RadioButton_Checked">Ж</RadioButton>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel Grid.Row="3">
+                <TextBlock Name="credbooknumbertext" Margin="5" DockPanel.Dock="Left">Номер зачетной книжки</TextBlock>
+                <TextBox Name="creditbooknumber" Margin="5"></TextBox>
+            </DockPanel>
+            <DockPanel Grid.Row="4">
+                <StackPanel DockPanel.Dock="Left">
+                    <TextBlock Name="logintext" Margin="5">Логин</TextBlock>
+                    <TextBlock Name="passwordtext" Margin="5">Пароль</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <TextBox Name="login" Margin="5"></TextBox>
+                    <TextBox Name="password" Margin="5"></TextBox>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel Grid.Row="5">
+                <Button Click="Cancel_Click" Margin="5" DockPanel.Dock="Right">Отмена</Button>
+                <Button Click="Button_Click" Margin="5">Добавить студента</Button>
+            </DockPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

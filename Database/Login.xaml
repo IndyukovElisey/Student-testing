@@ -1,0 +1,36 @@
+﻿<Window x:Class="Database.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="50.513" Width="324.308" MinHeight="190" MinWidth="190" Background="AliceBlue"
+        WindowStartupLocation = "CenterScreen" SizeToContent="Height" FocusManager.FocusedElement="{Binding ElementName=loginbox1}">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Закрыть программу" Click="MenuItem_Click_2"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="О программе" Click="MenuItem_Click"/>
+        </Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*" MinWidth="65"></ColumnDefinition >
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Введите данные для входа" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="10" FontWeight="Bold"/>
+            <TextBlock Text="Логин" Grid.Row="1" Grid.Column="0" HorizontalAlignment="left"  VerticalAlignment="Center" Margin="10"/>
+            <TextBlock Text="Пароль" Grid.Row="2" Grid.Column="0" HorizontalAlignment="left"  VerticalAlignment="Center" Margin="10"/>
+            <TextBox x:Name="loginbox1" Grid.Row="1" Grid.Column="1" Margin="10" VerticalAlignment="Center" Text="admin"/>
+            <PasswordBox x:Name="passwordbox1" Grid.Row="2" Grid.Column="1" Margin="10" VerticalAlignment="Center" Password="password"/>
+            <Button Content="Войти" Grid.Row="3" Grid.ColumnSpan="2" Click="Button_Click" Margin="10" IsDefault="true"/>
+        </Grid>
+    </DockPanel>
+</Window>

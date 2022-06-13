@@ -1,0 +1,41 @@
+﻿<Window x:Class="Database.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="Окно администратора" Height="173.365" Width="260" MinHeight="155"
+        WindowStartupLocation = "CenterScreen" SizeToContent="Height" Background="AliceBlue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="125*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2" Margin="0,0,-0.444,0.222">
+            <Menu>
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Выйти из учетной записи" Click="MenuItem_Click_1"></MenuItem>
+                    <Separator />
+                    <MenuItem Header="Закрыть программу" Click="MenuItem_Click_2"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="О программе" Click="MenuItem_Click"/>
+            </Menu>
+            <TextBlock Margin="5">Выберите действие</TextBlock>
+            <ComboBox Name="actionlist"  Margin="5" SelectedIndex="0">
+                <TextBlock >Добавление</TextBlock>
+                <TextBlock>Просмотр</TextBlock>
+                <TextBlock>Удаление</TextBlock>
+            </ComboBox>
+            <ComboBox Name="tablelist" Margin="5" SelectedIndex="0">
+                <TextBlock>Вопросы</TextBlock>
+                <TextBlock>Студенты</TextBlock>
+                <TextBlock>Дисциплины</TextBlock>
+                <TextBlock>Оценки по дисциплинам</TextBlock>
+                <TextBlock>Результаты билетов</TextBlock>
+                <TextBlock>Связи студент-дисциплина</TextBlock>
+            </ComboBox>
+            <Button x:Name="executebutton" Margin="5" Click="Button_Click">Продолжить</Button>
+        </StackPanel>
+    </Grid>
+</Window>

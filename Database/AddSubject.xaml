@@ -1,0 +1,20 @@
+﻿<Window x:Class="Database.AddSubject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="Добавление дисциплины" Height="164.907" Width="268.245"
+        WindowStartupLocation = "CenterScreen" SizeToContent="Height" Background="AliceBlue">
+    <Grid>
+        <StackPanel CanVerticallyScroll="True">
+            <TextBlock Margin="5">Название</TextBlock>
+            <TextBox x:Name="subjname" Margin="5"></TextBox>
+            <DockPanel>
+                <Button Click="Cancel_Click" Margin="5" DockPanel.Dock="Right">Отмена</Button>
+                <Button Click="Button_Click" Margin="5">Добавить дисциплину</Button>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>

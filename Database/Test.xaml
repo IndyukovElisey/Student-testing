@@ -1,0 +1,113 @@
+﻿<Window x:Class="Database.Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database"
+        mc:Ignorable="d"
+        Title="Тест" Height="480" Width="640" 
+        WindowStartupLocation = "CenterScreen" Loaded="Window_Loaded" Background="AliceBlue">
+    <Grid>
+        <DockPanel>
+            <GroupBox Margin="5" DockPanel.Dock="Top">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Left"  Margin="5">
+                        <TextBlock HorizontalAlignment="Right">Дисциплина:</TextBlock>
+                        <TextBlock HorizontalAlignment="Right">Уровень теста:</TextBlock>
+                        <TextBlock HorizontalAlignment="Right">Попытка №</TextBlock>
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Left" Margin="5">
+                        <TextBlock Name="subject"></TextBlock>
+                        <TextBlock Name="level"></TextBlock>
+                        <TextBlock Name="attempt"></TextBlock>
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Right" Margin="5">
+                        <TextBlock Name="result2">---</TextBlock>
+                        <TextBlock></TextBlock>
+                        <TextBlock Name="mark2">---</TextBlock>
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Right" Margin="5">
+                        <TextBlock Name="result1" HorizontalAlignment="Right">Тест</TextBlock>
+                        <TextBlock></TextBlock>
+                        <TextBlock Name="mark1" HorizontalAlignment="Right">Итоговая оценка:</TextBlock>
+                    </StackPanel>
+                </DockPanel>
+            </GroupBox>
+            
+            <Button Name="finishbutton" DockPanel.Dock="Bottom" Click="Button_Click" Margin="5">Завершить тест</Button>
+
+            <TabControl Margin="5" Background="#F0F0FF">
+                <TabItem Name="tab1" Header="Вопрос 1">
+                    <ScrollViewer Margin="5" VerticalScrollBarVisibility="Auto">
+                        <DockPanel>
+                            <DockPanel Name="answer_panel1" DockPanel.Dock="Bottom">
+                                <TextBlock Name="answertext1" Margin="5" DockPanel.Dock="Left">Ответ:</TextBlock>
+                                <TextBox Margin="5" Name="a1" TextChanged="TextChanged" ></TextBox>
+                            </DockPanel>
+                            <TextBlock Name="q1" DockPanel.Dock="Top" TextWrapping="Wrap">
+                                Вопрос 1<LineBreak/>
+                                ..........
+                            </TextBlock>
+                        </DockPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Name="tab2" Header="Вопрос 2">
+                    <ScrollViewer Margin="5" VerticalScrollBarVisibility="Auto">
+                        <DockPanel>
+                            <DockPanel Name="answer_panel2" DockPanel.Dock="Bottom">
+                                <TextBlock Name="answertext2" Margin="5" DockPanel.Dock="Left">Ответ:</TextBlock>
+                                <TextBox Margin="5" Name="a2" TextChanged="TextChanged"></TextBox>
+                            </DockPanel>
+                            <TextBlock Name="q2" DockPanel.Dock="Top" TextWrapping="Wrap">
+                                Вопрос 1<LineBreak/>
+                                ..........
+                            </TextBlock>
+                        </DockPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Name="tab3" Header="Вопрос 3">
+                    <ScrollViewer Margin="5" VerticalScrollBarVisibility="Auto">
+                        <DockPanel>
+                            <DockPanel Name="answer_panel3" DockPanel.Dock="Bottom">
+                                <TextBlock Name="answertext3" Margin="5" DockPanel.Dock="Left">Ответ:</TextBlock>
+                                <TextBox Margin="5" Name="a3" TextChanged="TextChanged"></TextBox>
+                            </DockPanel>
+                            <TextBlock Name="q3" DockPanel.Dock="Top" TextWrapping="Wrap">
+                                Вопрос 1<LineBreak/>
+                                ..........
+                            </TextBlock>
+                        </DockPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Name="tab4" Header="Вопрос 4">
+                    <ScrollViewer Margin="5" VerticalScrollBarVisibility="Auto">
+                        <DockPanel>
+                            <DockPanel Name="answer_panel4" DockPanel.Dock="Bottom">
+                                <TextBlock Name="answertext4" Margin="5" DockPanel.Dock="Left">Ответ:</TextBlock>
+                                <TextBox Margin="5" Name="a4" TextChanged="TextChanged"></TextBox>
+                            </DockPanel>
+                            <TextBlock Name="q4" DockPanel.Dock="Top" TextWrapping="Wrap">
+                                Вопрос 1<LineBreak/>
+                                ..........
+                            </TextBlock>
+                        </DockPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Name="tab5" Header="Вопрос 5">
+                    <ScrollViewer Margin="5" VerticalScrollBarVisibility="Auto">
+                        <DockPanel>
+                            <DockPanel Name="answer_panel5" DockPanel.Dock="Bottom">
+                                <TextBlock Name="answertext5" Margin="5" DockPanel.Dock="Left">Ответ:</TextBlock>
+                                <TextBox Margin="5" Name="a5" TextChanged="TextChanged"></TextBox>
+                            </DockPanel>
+                            <TextBlock Name="q5" DockPanel.Dock="Top" TextWrapping="Wrap">
+                                Вопрос 1<LineBreak/>
+                                ..........
+                            </TextBlock>
+                        </DockPanel>
+                    </ScrollViewer>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+    </Grid>
+</Window>
